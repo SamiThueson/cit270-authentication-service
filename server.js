@@ -8,6 +8,8 @@ const https = require('https')
 const app = express();
 const fs = require('fs')
 
+app.use(express.static('public'));
+
 app.use(bodyParser.json());
 
 app.get('/', (req,res)=>{
