@@ -25,7 +25,8 @@ https.createServer({
 
 app.post('/login', (req,res) =>{
     console.log(JSON.stringify(req.body));
-    if(req.body.userName =="samithueson" && md5(req.body.password)=="5f4dcc3b5aa765d61d8327deb882cf99"){
+    console.log("Here is the password " + req.body.password)
+    if(req.body.userName =="samithueson" && md5(req.body.password)=="1d5f0d0ce00a31015dc120cda077f4d3"){
         res.send("Welcome!");
     } else{
         res.send("Who are you?");
