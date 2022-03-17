@@ -27,6 +27,7 @@ app.post('/login', (req,res) =>{
     console.log(JSON.stringify(req.body));
     if(invalidLoginAttempts>=5){
         res.status(401);//unauthorized
+        res.send("Max attempts reached");
     } else if(req.body.userName =="samithueson" && md5(req.body.password)=="1d5f0d0ce00a31015dc120cda077f4d3"){
         res.send("Welcome!");
     } else{
